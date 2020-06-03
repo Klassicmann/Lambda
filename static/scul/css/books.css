@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Barlow&display=swap');
+#book_form{
+    width: 50%;
+    margin-top: 10vh;
+    padding: 1em;
+    box-shadow: 0px 0px 5px rgb(58, 55, 55);
+}
+
+
+#book_form form{
+    padding: 2em;
+    margin-bottom: 10vh;
+} 
+
+#book-list{
+    margin-left: 10vw;
+    width: 75%;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 1em;
+}
+
+#book-detail{
+    background-color:#fff;
+    width: 90%;
+    margin: 1%;
+    padding: 2em;
+     
+}
+#book-detail img{
+    height: 30vh;
+    margin-bottom: 3vh;
+}
+#book-detail  .book-desc{
+    padding: 2em;
+}
+#book-detail h2{
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+#book-detail h5{
+    color: rgba(17, 14, 14, 0.714);
+    text-align: start;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600px;
+    font-size: 1.2vw;
+}
+#book-detail .abt{
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+#book-detail p{
+    font-size: medium;
+    color: rgba(17, 14, 14, 0.714);
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+#authur{
+    text-align: center;
+    
+    font-family: 'Barlow', sans-serif;
+}
+
+.buy img{
+    height: 10vh !important;
+}
+#book-desc{
+    position: relative;
+}
+.buy {
+    position: absolute;
+    right: 5vw;
+}
+
+
+@media only screen and (max-width:700px){
+    #book-detail{
+        position: relative;
+        top: 70px;
+        display: gird;
+    }
+    #book-list, #profile-book-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    #book-card{
+        margin-bottom: 1vh;
+        height: 200px !important;
+    }
+    #book-authur{
+        display: none;
+    }
+
+    #book-detail h5{
+        color: rgba(17, 14, 14, 0.714);
+        text-align: start;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600px;
+        font-size: 20px;
+        margin-top: 1vh;
+       
+
+    }
+        
+    #book-detail img{
+        height: 20vh;
+        margin-bottom: 3vh;
+    }
+    #book-covers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: .5em;
+        grid-gap: .5em;
+    } 
+    #book-desc h2{
+        font-size: 40px;
+    }
+    #book-desc {
+        margin-top: -20px;
+    }
+
+}
+
+

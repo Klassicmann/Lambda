@@ -1,0 +1,89 @@
+{% extends 'scul/base.html' %}
+
+
+{% block content %}
+
+<div class=" bg-white row shadow-lg" id="book-detail">
+    {% if videos %}
+    <h2>{{course.title}}</h2>
+    <div class="d-flex" id="contai">
+        <div class="course-left" id="course-left">
+            <div class="thumbnail-videos" id="thumbnail-videos">
+
+                {% for video in videos  %}
+
+
+                <div class="row thumbnail-video" id="thumbnail-video">
+
+                    <div class="col-6" id="main-vid">
+
+                        <p class="text-secondary " id="vid{{vidoe.id}}"> <a class="disabled">{{video.video | safe}}</a>
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <h3 class="titl{{video.id}}"> <a> {{video.video_title}} </a></h3>
+                    </div>
+
+
+                </div>
+
+
+                {% endfor %}
+                {% else %}
+
+                <h3>No videos</h3>
+
+                {% endif %}
+            </div>
+        </div>
+
+
+        <div class="course-middle">
+            <div class=" pl-4  ">
+                
+                <div class="">
+                    <div class="" id="video-responsive">
+                        {{ vid.video | safe }}
+                    </div>
+                    
+                    <h5 id="mid-vid-title">{{ vid.video_title }}</h5>
+                    <hr />
+
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item" id="tab-1">
+                            <a class="nav-link active" href="#">Video Text</a>
+                        </li>
+                        <li class="nav-item" id="tab-2">
+                            <a class="nav-link" href="#">Video Documents</a>
+                        </li>
+                    </ul>
+                    <div id="koko">
+
+                        <h5>Video text</h5>
+                        <p>{{ vid.video_description }}</p>
+                    </div>
+
+                </div>
+                <div class="documents">
+                    <h5>Documents</h5>
+                    <ul>
+
+                        {% if documents %}
+                        {% for document in documents  %}
+
+                        <li>
+                            <a href="{{book.file.url}}" download>{{ document.document_name }}</a>
+
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% endblock content %}

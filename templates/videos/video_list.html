@@ -1,0 +1,47 @@
+{% extends 'scul/base.html' %}
+
+
+{% block content %}
+<div class="container" id="one">
+
+    {% if videos %}
+
+
+    <div class="vid-tuto bg-light" id="vid-tuto">
+        {% for video in videos  %}
+        <div class="vid-tuto-card">
+            <a href="/videos/{{video.id}}" class="text-secondary">
+                <img src="{{video.thumbnail.url}}" alt="">
+                <div class=" vid-tuto-card-txt">
+                    <h3>{{video.title}}</h3>
+                    <div class="d-flex align-items-baseline">
+                        <p><small class="">{{video.created_at}}</small></p>
+                        <small class="pl-5"> 200k views</small>
+                    </div>
+            </a>
+            <div class="d-flex">
+                <img src="{{video.authur.profile.image.url}}" alt="">
+                <div class="pl-2 pt-2 txt-btm">
+                    <p class=""><a href="/accounts/{{video.authur.id}}/info">{{video.authur}}</a></p>
+                    <p><small class="pl-1">{{video.subscribers}} Subscribers</small></p>
+                    <div class="span">
+                        <span>.</span>
+                        <span>.</span>
+                        <span>.</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+{% else %}
+
+<h2>No books available</h2>
+{% endif %}
+</div>
+{% endblock content %}

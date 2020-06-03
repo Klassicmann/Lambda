@@ -1,0 +1,33 @@
+{% extends 'scul/base.html' %}
+
+
+{% block content %}
+<div class="container" id="one">
+
+    {% if books %}
+
+    <div class="" id="book-list">
+        {% for book in books  %}
+
+
+        <div class="card shadow" id="book-card">
+            <img src="{{book.book_front_cover.url}}" class="card-img-top" alt="..." id="book-img">
+            <div class="card-body">
+                <a href="/books/{{book.id}}">
+                    <h5 class="card-title text-primary">{{book.book_title}}</h5>
+                </a>
+                <p class="card-text text-secondary">{{book.authur}} </p>
+            </div>
+
+        </div>
+
+
+        {% endfor %}
+    </div>
+
+    {% else %}
+
+    <h2>No books available</h2>
+    {% endif %}
+</div>
+    {% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'scul/base.html' %}
+
+
+{% block content %}
+<div class="container" id="one">
+
+    {% if courses %}
+
+    <div class="" id="course-list">
+        {% for course in courses  %}
+
+
+        <a href="/courses/{{course.id}}">
+            <div class="course-cover" id="course-cover">
+                <img src="{{course.cover_picture.url}}" height="200px" width="300px" alt="">
+
+                <div class="cover-text">
+                    <h3> {{ course.title }}</h3>
+                    <p>Learn all about django</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+
+
+</div>
+
+{% else %}
+
+<h2>No books available</h2>
+{% endif %}
+
+{% endblock content %}

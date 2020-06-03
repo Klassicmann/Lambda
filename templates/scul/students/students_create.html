@@ -1,0 +1,18 @@
+{% extends "scul/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container bg-light p-2 " style="margin-top: 10vh;">
+    <h3 style="text-align: center; font-family: 'Abel', sans-serif;">Add a student</h3>
+    <div class="student-add p-5 bg-white">
+
+        <form class=" " id="student_form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form|crispy }}
+
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

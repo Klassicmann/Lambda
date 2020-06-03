@@ -1,0 +1,98 @@
+{% extends 'scul/base.html' %}
+{% load static %}
+{% block content %}
+<div class=" school row">
+
+    <div class="col-5" id="school-left">
+        <div class="" id=" ">
+            <img src="{{object.logo.url}}" alt="">
+        </div>
+        <div class=" p-5 pt-3 ">
+
+            <h3 class="font-weight-bold">{{object.school_name}}</h3>
+            <small>{{school.school_type}}</small>
+            <p class="review"><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star mr-5"></i>
+                <a class="ml-5 btn btn-primary btn-sm text-white"><i class="fas fa-envelope-open-text text-white"></i>
+                    Leave a message</a>
+            </p>
+            <hr>
+            <p id="like-btn"> <a class="pr-3"> <i class="far fa-thumbs-up"></i>8.5k </a>
+                <a class="pr-3"><i class="fas fa-wheelchair"></i> Follow</a>
+            </p>
+
+            <div class="boxes">
+                <h5 class="text-secondary">
+                    Located in <em class="">{{school.quater}}, {{school.town}} Cameroon</em>
+
+                </h5>
+                <h5 class="text-secondary">Contact:<em> 237 678439843, 237 228938839</em></h5>
+                <h5 class="text-secondary">Email: <em>{{school.email}}</em></h5>
+
+                <hr>
+                <div>
+
+                    <a href=""><i class="fas fa-edit"></i> Edit</a>
+                    <hr>
+                </div>
+
+                <div class="row ml-2">
+                    <a class="text-dark " href=""><i class="text-secondary fas fa-book pr-5 "></i><br>Courses</a>
+                    <a class="text-dark " href=""><i class="text-secondary fas fa-video pr-5 "></i><br>Videos</a>
+                    <a class="text-dark" href=""><i class="text-secondary  fas fa-images pr-5 "></i><br>Images</a>
+                    <a class="text-dark " href=""><i class="text-secondary fas fa-podcast pr-5 "></i><br>Posts</a>
+
+                </div>
+                <hr>
+                <div>
+                    <a href="" class="">Manage</a>
+                    <hr>
+                    <p><a href="/schools/{{school.id}}/students"> <i class="fas fa-user"></i> Students</a></p>
+                    <p><a href="/schools/{{school.id}}/teachers"><i class="fas fa-user-graduate"></i> Teachers</a></p>
+                    <p><a href=""><i class="fas fa-university"></i> Staff</a></p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="school-mid col-7 p-5 bg-light ">
+        <h3>About {{school.school_name}}</h3>
+        <h5 class="text-secondary">
+            {{school.description}}
+        </h5>
+        <h5 class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, odio amet
+            repudiandae dolore similique,
+            distinctio maiores at in iste error dolores inventore voluptatibus! Impedit corporis neque deleniti
+            pariatur, perferendis molestias eaque iste amet, cumque repellat facilis quo aperiam tempore quasi nam iusto
+            nostrum voluptatibus dignissimos atque totam veritatis nesciunt. Aut atque sed in beatae deleniti provident
+            non dolorum quos repellendus, molestias accusamus tempore eveniet qui impedit inventore cum! Quisquam
+            repellendus aliquam illum, doloribus ratione tempore asperiores neque error explicabo sapiente vitae ex
+            placeat? Ipsam in ea non necessitatibus suscipit, harum ad ipsa voluptatum possimus saepe totam id ab
+            accusamus facere!</h5>
+        <h5 class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, odio amet
+            repudiandae dolore similique,
+            distinctio maiores at in iste error dolores inventore voluptatibus! Impedit corporis neque deleniti
+            pariatur, perferendis molestias eaque iste amet, cumque repellat facilis quo aperiam tempore quasi nam iusto
+            nostrum voluptatibus dignissimos atque totam veritatis nesciunt. Aut atque sed in beatae deleniti provident
+            non dolorum quos repellendus, molestias accusamus tempore eveniet qui impedit inventore cum! Quisquam
+            repellendus aliquam illum, doloribus ratione tempore asperiores neque error explicabo sapiente vitae ex
+            placeat? Ipsam in ea non necessitatibus suscipit, harum ad ipsa voluptatum possimus saepe totam id ab
+            accusamus facere!</h5>
+        <h5 class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, odio amet
+            repudiandae dolore similique,
+            distinctio maiores at in iste error dolores inventore voluptatibus! Impedit corporis neque deleniti
+            pariatur, perferendis molestias eaque iste amet, cumque repellat facilis quo aperiam tempore quasi nam iusto
+            nostrum voluptatibus dignissimos atque totam veritatis nesciunt. Aut atque sed in beatae deleniti provident
+            non dolorum quos repellendus, molestias accusamus tempore eveniet qui impedit inventore cum! Quisquam
+            repellendus aliquam illum, doloribus ratione tempore asperiores neque error explicabo sapiente vitae ex
+            placeat? Ipsam in ea non necessitatibus suscipit, harum ad ipsa voluptatum possimus saepe totam id ab
+            accusamus facere!</h5>
+    </div>
+
+</div>
+{% endblock content %}

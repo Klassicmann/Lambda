@@ -1,0 +1,53 @@
+{% extends 'scul/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container " id="students_list" style="margin-top: 10vh ">
+    <h1 class="text-green text-center">All Users</h1>
+
+    <div class="row d-flex">
+        <div class="col-10">
+            {% if users %}
+            <ol id="students">
+                {% for user in users  %}
+
+                <li>
+                    <div class="d-flex students_list">
+
+                        <div class="student-img">
+                            <img src="{{user.profile.image.url}}" alt="">
+                        </div>
+                        <div>
+
+                            <h3><a href="/accounts/users/{{user.id}}"
+                                    class="text-secondary user-check{{user.id}}">{{user.username}}
+                                    {% if user.is_superuser%}
+                                    (Admin)
+                                    {% endif %}
+
+                                </a>
+                            </h3>
+                            <p>{{user.email}}</p>
+                        </div>
+
+
+                    </div>
+                </li>
+                {% endfor %}
+            </ol>
+            {% else %}
+            <h2>No User found !!</h2>
+            {% endif %}
+        </div>
+
+        <div class="col-2">
+            <a href="/schools/student/add-student" class="btn btn-primary"> Add user</a>
+            <a href="/schools/student/add-student" class="btn btn-danger btn-sm mt-3"> Remove user</a>
+
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock content %}

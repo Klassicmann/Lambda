@@ -1,0 +1,77 @@
+{% extends 'scul/base.html' %}
+
+
+{% block content %}
+
+<div class=" bg-white row shadow-lg" id="book-detail">
+
+    <h2>{{video.title}}</h2>
+    <div class="d-flex" id="contai">
+        <div id="course-left">
+            {% if other_videos %}
+            <h5 class="text-primary"> Other Videos</h5>
+            <div class="" id="thumbnail-videos">
+                {% for vids in other_videos  %}
+                <a href="" class="text-secondary">
+
+                    <div class=" row" id="thumbnail-video">
+                        <div class="col-6">
+                            <p class="text-secondary " id="vid">{{vids.video | safe}}</p>
+                        </div>
+
+                        <div class="col-6">
+                            <h3>{{vids.title}}</h3>
+                        </div>
+
+                    </div>
+                </a>
+
+                {% endfor %}
+                {% else %}
+
+                <h3>No other videos </h3>
+
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="course-middle" id="vd-middle">
+        <div class="">
+            <div class="" id="">
+            <div id="video-responsive">
+                <p id="mid-vid">{{ video.video | safe }}</p>
+                </div>
+                <div class=" mid-vid-text">
+                <div class="d-flex align-items-baseline" id="mid-vid-text">
+                    <h5 class="pl-5">{{ video.title }}</h5>
+                    <div class="share d-flex">
+                        <p><i class="fas fa-eye mr-1 font-weight-bold "></i>1.3M</p>
+                        <p><i class="fas fa-thumbs-up font-weight-bold "></i> 400k</p>
+                        <p><i class="fas fa-thumbs-down font-weight-bold  mr-1"></i>250k</p>
+                        <p class=" "> <i class="fas fa-share-alt mr-1"></i>23</p>
+                    </div>
+                </div>
+                <hr />
+                <ul class="nav nav-tabs pl-5">
+                    <li class="nav-item" id="tab-1">
+                        <a class="nav-link active" href="#">Video Text</a>
+                    </li>
+                    <li class="nav-item" id="tab-2">
+                        <a class="nav-link" href="#">Video Documents</a>
+                    </li>
+                </ul>
+                <div class="ml-4" id="koko">
+
+                    <h5>Description</h5>
+                    <p>{{ video.video_description }}</p>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock content %}

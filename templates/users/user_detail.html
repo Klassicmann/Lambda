@@ -1,0 +1,62 @@
+{% extends 'scul/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container " id="students_list" style="margin-top: 10vh ">
+
+    <div class="d-flex bg-light p-3" id="user-detail">
+        <div class="user-info">
+            <div class="user-image">
+                <img src="{{ user.profile.image.url}}" alt="">
+
+                <a href="" class="btn btn-primary btn-sm mt-5 "><i class="fas fa-envelope-open"></i> Leave a
+                    message</a>
+                <hr>
+                <a href="" class="mt-5"> <i class="fab fa-angellist"></i> Subscribe</a>
+            </div>
+
+        </div>
+        <div class="user-info-txt">
+            <div class="user-txt">
+                <small class="text-dark">Account info</small>
+                <h3>{{user.profile.full_name}}</h3>
+                <h4>@{{user.username}}
+                </h4>
+                <h4>{{user.email}}</h4>
+                <hr>
+                <small class="text-dark">Education</small>
+                <h4>{{user.profile.account_type}} in
+                    Institue Universitaire du Golfe</h4>
+
+                <hr>
+                <small class="text-dark">Address</small>
+                <h4>Lives Bonamoussadi, Douala Cameroon</h4>
+                <hr>
+                <small class="text-dark">Contact</small>
+                <h4>654118518</h4>
+
+                <hr>
+                <small class="text-dark">Hobby</small>
+                <h4> dance, Love Python programming</h4>
+                <hr>
+                <h3>Gives private classes for students in <small class="text-secondary"> High school</small>
+                in <small class="text-primary"> Maths, and English</small>
+                 <hr>
+                <small class="text-dark">More about @{{user.username}}</small>
+                <br>
+                <h5 class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit explicabo
+                    assumenda, iste molestias
+                    nemo ratione ad libero cupiditate debitis eos dolor quod accusamus nihil facilis, quidem laboriosam
+                    odit est quibusdam!</h5>
+
+                <hr>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock content %}

@@ -1,0 +1,36 @@
+<div class="course-middle">
+    <div class=" pl-4  ">
+        <div class="">
+            <p id="mid-vid">{{ video.video | safe }}</p>
+            <h5>{{ video.title }}</h5>
+            <hr />
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item" id="tab-1">
+                    <a class="nav-link active" href="#">Video Text</a>
+                </li>
+                <li class="nav-item" id="tab-2">
+                    <a class="nav-link" href="#">Video Documents</a>
+                </li>
+            </ul>
+            <div id="koko">
+
+                <h5>Video text</h5>
+                <p>{{ video.video_description }}</p>
+            </div>
+
+        </div>
+        <div class="documents">
+            <h5>Documents</h5>
+            <ul>
+
+
+                <li>
+                    <a href="{{video.video_documents.url}}" download> Document 1 </a>
+
+                </li>
+
+            </ul>
+        </div>
+
+    </div>

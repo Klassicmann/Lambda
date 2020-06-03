@@ -1,0 +1,14 @@
+.vid-container {
+  background-color: khaki !important;
+  width: 100%;
+}
+.vid-left {
+  width: 100% !important;
+}
+#vidList a {
+  display: block;
+  margin-top: 1em;
+  width: 40%;
+}
+.title {
+}

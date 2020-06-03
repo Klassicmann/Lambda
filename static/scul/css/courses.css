@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+#course-list{
+    margin-top:15vh;
+    width: 100%;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 1em;
+
+}
+.course{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 1em;
+
+}
+#course-cover{
+    width: 22vw;
+    height: 22vh;
+    position: relative;
+    border-radius: 3%;
+    overflow: hidden; 
+    
+}
+#course-cover img {
+    transition: all 1s;
+    width: 100%;
+}
+
+.cover-text{
+    position: absolute;
+    top: 0;
+    padding-top: 5vh;
+    background-color: rgb(23, 0, 2, .6);
+    width: 100%;
+    height: 100%;
+}
+.cover-text p, .cover-text h3{
+    text-align: center;
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+    
+}
+ .cover-text h3{
+    font-size: 40px;
+ }
+ 
+ .cover-text p{
+    color: rgba(231, 216, 216, 0.986);
+    font-weight: bold;
+ }
+ #contai{
+     width: 100%;
+ }
+#course-left{
+     width: 23%;
+     margin-top:30px;
+
+}
+ #thumbnail-videos{
+     padding-top: 60px;
+     margin-left: -20px;
+     overflow-y: auto;
+     height:500px;
+ } 
+
+ #thumbnail-video{
+     margin-top: -60px;
+     height: 20vh;
+     margin-left: -12%;
+     position: relative;
+     padding: .3em;
+       
+ }
+ 
+ #thumbnail-video iframe{
+     height: 150px !important;
+     width: 150px !important;
+     position: absolute;
+     left: 0;
+     top: -5vh;
+ }
+ #thumbnail-video h3{
+     font-size: 14px;
+     position: absolute;
+     top: 10px;
+     left: 0;
+
+ }
+.disabled{
+     pointer-events: none;
+     color: green;
+ }
+
+ .course-middle{
+     overflow-y: auto;
+     height:600px;
+     
+ }
+ 
+ .course-middle h5{
+     font-weight: bolder;
+     font-size: 30px !important;
+  
+     
+ }
+
+ #course-left{
+    overflow: auto;
+    overflow-y: hidden;
+    -ms-overflow-y: hidden;
+ }
+
+
+
+ .course-middle{
+     width: 70%;
+ }
+ #mid-vid{
+     
+ }
+ #koko{
+     
+    overflow: auto;
+    overflow-y: hidden;
+    -ms-overflow-y: hidden;
+ }
+ #koko p{
+     text-align: start;
+ }
+ #koko h5{
+     font-size: 20px;
+ }
+ .documents{
+   display: none;
+ }
+ .documents li{
+     list-style: none;
+ }
+ @media only screen and (max-width:700px){
+    
+#contai{
+    margin-left: 0 !important;
+    width: 100%;
+}
+#course-left{
+    display: none;
+
+}
+#thumbnail-videos{
+    padding-top: 60px;
+    margin-left: -20px;
+    overflow-y: auto;
+    height:300px;
+} 
+
+#thumbnail-video{
+    margin-top: -60px;
+    height: 20vh;
+    position: relative;
+    padding: .3em;
+      
+}
+
+#thumbnail-video iframe{
+    height: 150px !important;
+    width: 150px !important;
+    position: absolute;
+    left: 0;
+    top: -5vh;
+}
+#thumbnail-video h3{
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+}
+
+.course-middle{
+    width: 100%;
+    margin-left: -20px;
+    background-color:#fff;
+
+}
+#mid-vid{
+    margin-top: 5px;
+}
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+   
+}
+.video-responsive iframe{
+    left:0;
+    top: 0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+#book-detail h2:first-child{
+    display: none;
+}
+.mid-vid-text{
+   margin-top: 60px;
+}
+.course{
+    display: block;
+}
+#course-cover{
+    width: 90%;
+    height: 22vh;
+    position: relative;
+    border-radius: 3%;
+    overflow: hidden; 
+    margin-bottom: 1vh;
+    
+}
+#course-cover img {
+    transition: all 1s;
+    width: 100%;
+}
+
+.cover-text{
+    position: absolute;
+    top: 0;
+    padding-top: 5vh;
+    background-color: rgb(23, 0, 2, .6);
+    width: 100%;
+    height: 100%;
+}
+.cover-text p, .cover-text h3{
+    text-align: center;
+    color: #fff;
+    font-family: 'Baloo Da 2', cursive;
+    
+}
+ .cover-text h3{
+    font-size: 40px;
+ }
+ 
+ .cover-text p{
+    color: rgba(255, 255, 255, 0.986);
+    font-weight: bold;
+    font-size: 30px;
+ }
+ 
+ #koko{
+    overflow: auto;
+    overflow-y: hidden;
+    -ms-overflow-y: hidden;
+ }
+
+ }

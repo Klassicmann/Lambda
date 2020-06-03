@@ -1,0 +1,43 @@
+{% extends 'scul/base.html' %}
+
+
+{% block content %}
+<div class="container" id="one">
+
+    {% if sculs %}
+    <a href="/schools/create" class="btn btn-sm btn-primary">Create School</a>
+    <div class="school_list pt-5">
+
+        {% for scul in sculs  %}
+        <div class="d-flex school_div" id="school{{scul.id}}">
+            <div>
+                <img src="{{scul.logo.url}}" alt="" class="school_img mt-2">
+            </div>
+            <div class="ml-3 text">
+                <h5><a href="{{scul.id}} ">{{scul.school_name}}</a></h5>
+                <p>{{scul.description | truncatewords:15}}</p>
+                <p class="review" id="rev"><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star mr-5"></i>
+
+                </p>
+                <small><em style="font-style:normal; color: rgba(209, 83, 10, 0.932); font-weight: 600;">Located in
+                        {{scul.quater}}
+                        {{scul.town}}</em></small>,
+                <small><strong>Created on {{scul.created_at}}</strong></small>
+
+
+            </div>
+        </div>
+
+
+        {% endfor %}
+    </div>
+    {% else %}
+
+    <h2>No school in school list</h2>
+    {% endif %}
+
+    {% endblock content %}

@@ -1,0 +1,48 @@
+/* Add student*/
+.student-add{
+    width: 60%;
+    margin-left: 16vw;
+}
+
+/* Student List*/
+
+#students_list{ 
+}
+#students_list h4{
+    color: rgba(27, 79, 124, 0.816);
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+}
+#students_list h1{
+    
+    font-family: 'Barlow', sans-serif;
+}
+#students_list h2{
+    font-family: 'Abel', sans-serif;
+}
+#stu-list-form{
+
+}
+
+#students{
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+#students li{
+    margin-top: 1em;
+}
+
+.students_list img{
+    height :10vh;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.students_list h3{
+    
+    font-family: 'Abel', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+}

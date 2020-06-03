@@ -1,0 +1,68 @@
+{% extends 'scul/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container " id="students_list" style="margin-top: 10vh ">
+    <h1 class="text-green text-center">Teachers List</h1>
+    <h4>Please select Class</h4>
+
+    <form action="" method="GET" id="stu-list-form">
+        <select name="class" id="">
+            <option disabled selected>Filter by class</option>
+            {% if classes %}
+            {% for class in classes  %}
+            <option value="{{class}}">{{class}}</option>
+            {% endfor %}
+            {% else %}
+            <option>No classes found</option>
+            {% endif %}
+
+
+        </select>
+        <br>
+        <button type="submit" class="btn btn-sm btn-outline-primary mt-2">Submit</button>
+    </form>
+
+
+
+    <div class="row d-flex">
+        <div class="col-10">
+            {% if teachers %}
+            <ol id="students">
+                {% for teacher in teachers  %}
+
+                <li><a href="/users/user-detail">
+                        <div class="d-flex students_list">
+
+                            <div class="student-img">
+                                <img src="{{teacher.teachers_image.url}}" alt="">
+                            </div>
+                            <div>
+
+                                <h3><a href="/schools/teachers/{{teacher.id}}/teacher-detail"
+                                        class="text-secondary">{{teacher.name}}</a></h3>
+                                <p>{{teacher.matricule}}</p>
+                            </div>
+
+
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+            {% else %}
+            <h2>No teacher found !!</h2>
+            {% endif %}
+        </div>
+
+        <div class="col-2">
+            <a href="/schools/teachers/add-teacher" class="btn btn-primary"> Add Teacher</a>
+            <a href="/schools/student/add-student" class="btn btn-sm btn-warning mt-3"> Delete Teacher</a>
+            <a href="#" class="btn btn-outline-success btn-sm mt-5">Pay Teachers</a>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock content %}

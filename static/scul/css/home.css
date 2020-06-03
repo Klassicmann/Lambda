@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+.main{
+    min-height: 100vh;
+    width: 100%;
+    background: rgb(2,2,2,.7);
+    background-color:rgb(12, 84, 97) !important;
+} 
+.content{
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    width: 40%;
+}
+
+.content h1{
+    color: rgb(226, 86, 31);
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    font-size: 50px;
+   
+}
+
+@media only screen and (max-width: 600px){
+ 
+    .main{
+        min-height: 100vh;
+        width: 100%;
+        background: rgb(2,2,2,.7);
+    } 
+    .content{
+        position: absolute;
+        top: 20vh;
+        left: 20vw;
+        width: 80%;
+   
+    }
+    
+    .content h1{
+        color: rgb(226, 86, 31);
+        font-family: 'Comfortaa', cursive;
+        font-weight: bold;
+        font-size: 30px;
+
+       
+    }
+    .content h3{
+        color: white;
+        font-size: 20px;
+    }
+    .content img{
+        width: 40%;
+        height: 120px;
+        margin-bottom: 30px;
+    }
+}

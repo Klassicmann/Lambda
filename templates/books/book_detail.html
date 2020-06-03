@@ -1,0 +1,51 @@
+{% extends 'scul/base.html' %}
+
+
+{% block content %}
+
+<div class=" bg-white row shadow-lg" id="book-detail">
+    <div class="col-3" id="book-authur">
+        <img src="{{book.authur_image.url}}" alt="">
+        <h4 class="abt">About the Authur</h4>
+        <h3 class="" id="authur"> {{book.authur}}</h3>
+        <p>{{book.about_authur| truncatewords:30}}</p>
+    </div>
+
+    <div class="col-3" id="book-covers">
+        <img src="{{book.book_front_cover.url}}" alt="">
+        <img src="{{book.book_back_cover.url}}" alt="">
+    </div>
+
+    <div class="col-6 book-desc">
+        <h2 class="text-secondary">{{book.book_title}}</h2>
+        <h2 class="text-secondary">{{book.book_title}}</h2>
+        <h5>{{book.description}}</h5>
+        <br>
+        <div class="buy">
+
+            <div class="">
+                <p class="font-weight-bold pr-5"><a href="">Add to my books</a> </p>
+
+            </div>
+            <div class="d-flex align-items-baseline">
+                <h2 class="text-success pr-5">Price: {{book.price}} FCFA</h2>
+                <div>
+
+
+                    <a href="{{book.file.url}}" download style="">
+
+                        <img src="/static/scul/img/Download-Button.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+{% endblock content %}

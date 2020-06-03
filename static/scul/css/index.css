@@ -1,0 +1,421 @@
+body{
+    background:#c0c7cfa7;
+    color: rgba(17, 23, 27, 0.877);
+    font-weight: 500;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.7%;
+    width: 100%;
+    background: rgba(31, 40, 71);
+    height: 50px;
+    box-shadow: 0 0 3px rgb(100, 34, 98);
+    z-index: 1000;
+    
+}
+a:link {
+  text-decoration: none;
+}
+a:hover{
+    color: black;
+
+}
+.logo{
+    margin-left: 2%;
+}
+.logo h4{
+    
+    color: white;
+    font-family: 'Finger Paint', cursive;
+}
+.logo img{
+    margin-top: -7px;
+    width: 45px;
+    height: 40px;
+}
+.account{
+    
+    margin-left: 10px;
+    
+}
+.account img{
+    margin-right: 20px;
+    border: 2px dotted #4d4a4a;
+    border-radius: 20px;
+    margin-top: -5px;
+}
+.account h5{
+    color: #ccc;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+nav input{
+    background:#4d4a4a;
+    border: none; 
+    padding:4.5px;
+    padding-right:80px;
+    border-radius: 5px;
+    margin-left: 20px;
+    
+}
+nav button{
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 10px;
+    
+    
+}
+.nav-linK{
+    margin-left: 2%;
+}
+.nav-link{
+    margin-top: -5px;
+    font-family: 'Itim', cursive;
+    font-size: 15px;
+    color: rgb(148, 134, 134) !important;
+    margin-left: -9px;
+}
+#material ul, #material1 ul {
+    display: none;
+    background: rgba(31, 40, 71);
+    position: absolute;
+    top: 50px;
+    left: 28vw;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 30px;
+}
+#material1 ul{
+    left: 36vw;
+}
+#material ul li, #material1 ul li{
+    display: block;
+}
+
+
+nav li{ 
+    font-family: 'arial' sans-serif;
+    margin-top: -10;
+}
+#icons{
+    margin-top: -8px;
+    margin-left:20px;
+}
+
+#icons li{
+    margin-left: 10px;
+}
+#icons li a{
+    font-size: 22px;
+    color: rgba(162, 168, 168, 0.878);
+    
+}
+#icons li a span{
+    background: red;
+    margin-top:17px;
+    margin-left: -7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+    padding: 0 2px 0 2px;
+
+}
+ .nav-linK i {
+    color: #ccc;
+}
+#one{
+    margin-top: 60px;
+}
+#icons li:last-child span:nth-child(3){
+    background: rgba(162, 168, 168, 0.878);
+    margin-top: 26px;
+}
+   
+.school_img{
+    height: 75px;
+    width: 80px;
+    border-radius:50%;
+    border: 1px solid #4d4a4a;
+}
+.text p{
+    font-size: 14px;
+}
+
+.user-check li{
+    list-style: none;
+    margin-right: 20px;
+    
+}
+.user-check li a{
+    text-decoration: none;  
+   
+}
+
+/* Creat school Form*/
+
+.create_school_form{
+    width:50%;
+    
+}
+.create_school_form input{
+    background: rgb(234,234,732, .7) !important;
+}
+
+#confirm-delete {
+    margin:20%;
+}
+
+
+/* School List page*/
+.school_list{
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+}
+
+
+/* School Detail Page*/
+
+.school h3{
+    font-family: 'Barlow', sans-serif;
+
+}
+.school h5{
+    
+    font-family: 'Abel', sans-serif;
+}
+#school-left{
+    height: 900px;
+    width: 100%;
+    float: left;
+}
+#school-left img{
+
+    margin-top: 40px;
+    width: 100%;
+    height: 40vh;
+    
+}
+.school-mid{
+    margin-top: 5vh !important;
+}
+.school-mid h3{
+    text-align: center;
+}
+
+.boxes div div{
+    width: 100%;
+    border-radius: 50px;
+    
+}
+
+.boxes i{
+    text-align: center;
+    font-size: 30px;
+}
+.boxes h3{
+    font-family: 'Barlow', sans-serif;
+
+}
+.boxes em{
+    font-style:normal;
+    font-weight: bold;
+}
+
+.review i{
+    margin-left: 5px;
+    color: rgb(234, 195, 21);
+    font-size: 25px;
+}
+
+.noti{
+    width: 20vw !important;
+}
+
+.noti h3{
+    font-size: 14px;
+    font-family: 'Abel', sans-serif;
+}
+.noti p{
+    font-size: 11px;
+    line-height: 10px;
+    font-family: 'Barlow', sans-serif;
+}
+.noti img{
+    height: 40px;
+    width: 50px;
+}
+#like-btn i{
+    font-size: 25px;
+
+}
+
+#msg{
+    width: 15vw !important;
+}
+
+
+#school5 a::after{
+    content: ' (Critical !!!!!!!!!)';
+    color: red;
+    font-size: 14px;
+}
+
+#rev i{
+    font-size: 20px;
+
+}
+.input button i{
+        
+    padding-top: 5px;
+}
+
+@media only screen and (max-width:700px){
+    nav{
+        height: 40px !important;
+    }
+    .navv-links, .user-check{
+        display: none;
+    }
+    .input{
+        position: fixed;
+        left: -30px;
+        top: 40px;
+        width: 100%;
+        box-shadow: 0 0 5px 0 rgba(31, 40, 71);
+
+    }
+    .input input{
+        width: 85%; 
+        padding: 0 3px 0 8px;
+        border-radius: 0 !important;
+        background: #fff;
+        color: black !important;
+    }
+    .input button{
+        position: fixed;
+        right: 0;
+        top: 40px;
+        border-radius: 0 !important;
+        padding: 4px 25px 5px 25px;
+        background: rgba(31, 40, 71) ;
+        height: 25px;
+    }
+    .input button i{
+        margin-top: -14px;
+        font-size: 20px;
+        color: teal;
+    }
+    #logo-mobile{
+        height: 35px;
+        width: 30px;
+        position: fixed;
+        top: 8px;
+        right: 20px;
+        z-index: 2000;
+    }
+    .userr li:first-child{
+        margin-top: 10px !important;
+        margin-left: -20px !important;
+    }
+   
+    .userr li{
+        display: none;
+
+    }
+    .icons{
+        margin-left: 15% !important;
+    }
+    
+    #icons li a{
+        margin-top: 0px;
+        font-size: 20px;
+        color: rgba(163, 163, 163, 0.808)  !important;
+
+    }
+    #icons li a span{
+        background-color: rgba(235, 3, 3, 0.644);
+    }
+    #right{
+        display: none;
+    }
+    #accounts{
+        display: none;
+    }
+    .m-side{
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 50px;
+        z-index: 2000;
+    }
+    #mside{
+    
+        width: 100%;
+        height: 100%;
+        }
+    .m-side img{
+        width: 50px;
+        height: 40px;
+
+    }
+    #m-sidebar{
+        position: fixed;
+        left: 0;
+        top: 50px;
+        height: 600px;
+        width: 40%;
+        background: #fff;
+        z-index: 2000;
+        display: none;
+        }
+
+    #side-profile-image{
+        height: 150px;
+        width: 95%;
+        margin:5px;
+    }
+    #side-text{
+        margin: 5px;
+        font-style: italic;
+    }
+    #posst{
+        display: inline;
+        margin-top: 4px;
+        color: rgba(163, 163, 163, 0.808) ;
+        font-size: 20px;
+    }
+    #posst span{
+        padding: .17em !important;
+    }
+    
+    .noti{
+        width: 60vw !important;
+        height: 200px !important;
+        overflow: auto;
+        overflow-y: auto;
+        -ms-overflow-y: hidden;
+    }
+    
+    #msg{
+        width: 60vw !important;
+        height: 200px;
+        overflow: auto;
+        overflow-y: auto;
+        -ms-overflow-y: hidden;
+    }
+    .logo{
+        display: none;
+    }
+    
+
+    
+}

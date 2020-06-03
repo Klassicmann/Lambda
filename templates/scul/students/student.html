@@ -1,0 +1,66 @@
+{% extends 'scul/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container " id="students_list" style="margin-top: 10vh ">
+    <h1 class="text-green text-center">Student List</h1>
+    <h4>Please select Class</h4>
+
+    <form action="" method="GET" id="stu-list-form">
+        <select name="class" id="">
+            <option disabled selected>Filter by class</option>
+            {% if classes %}
+            {% for class in classes  %}
+            <option value="{{class}}">{{class}}</option>
+            {% endfor %}
+            {% else %}
+            <option>No classes found</option>
+            {% endif %}
+
+
+        </select>
+        <br>
+        <button type="submit" class="btn btn-sm btn-outline-primary mt-2">Submit</button>
+    </form>
+
+
+
+    <div class="row d-flex">
+        <div class="col-10">
+            {% if students %}
+            <ol id="students">
+                {% for student in students  %}
+
+                <li>
+                    <div class="d-flex students_list">
+
+                        <div class="student-img">
+                            <img src="{{student.student_image.url}}" alt="">
+                        </div>
+                        <div>
+
+                            <h3><a href="/schools/students/{{student.id}}/student-detail"
+                                    class="text-secondary">{{student.name}}</a>
+                            </h3>
+                            <p>{{student.matricule}}</p>
+                        </div>
+
+
+                    </div>
+                </li>
+                {% endfor %}
+            </ol>
+            {% else %}
+            <h2>No Student found !!</h2>
+            {% endif %}
+        </div>
+
+        <div class="col-2">
+            <a href="/schools/student/add-student" class="btn btn-primary"> Add student</a>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock content %}

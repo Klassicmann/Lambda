@@ -1,0 +1,223 @@
+{% extends "scul/base.html" %}
+{% load crispy_forms_tags %}
+{% load embed_video_tags %}
+{% load crispy_forms_tags %}
+
+{% block welcome %}
+
+{% endblock welcome %}
+{% block content %}
+<div class="wrapper mt-5" id="profile-container">
+
+    <div class="row" id="main">
+
+        <div class="col-3  pt-3 text-secondary " id="p-left">
+            <div class="short-info">
+                <img src="{{request.user.profile.image.url}}" class="user-profile-img" alt="">
+            </div>
+            <div class="pt-3 pl-3">
+                <a class="text-primary" id="change-pro-img">Change profile image</a>
+
+                <form action="" enctype="multipart/form-data" id="upd-img" method="POST">
+                    {% csrf_token %}
+                    {{form|crispy }}
+                    <button type="submit" class="btn btn-sm btn-outline-primary">update</button>
+                </form>
+                <p class="text-success">Online<p>
+                        </table>
+                        <h5 class="pt-3 text-dark"> {{request.user.profile.full_name}}</h5>
+                        <small>@{{request.user.username}}</small>
+                        {% if school %}
+                        <p> Science student in GBHS Belo</p>
+
+                        {% endif %}
+                        <p id="account_type">{{user.profile.account_type}}</p>
+                        <hr />
+
+                        {% if not school %}
+
+                        <a href="">Add my school</a><br>
+                        <small>You can add your school to better manage your account and pay your school fee throught
+                            MTN mobile
+                            money in one
+                            click.</small>
+                        <hr>
+                        {% endif %}
+                        <a href="">Edit profile</a> <br>
+                        <small>Add your address, phone number and many more information about you to let other people
+                            know you better</small>
+                        <hr>
+                        <a href="">Update to premium</a>
+                        <small>to get full access to all the content of this site and also be able to
+                            download materials for offline use.</small>
+                        <div id="condi" style="display: none;">
+                            <a href="/courses/create-course">Create course</a><br>
+                            <a href="/books/create"> Add a book</a><br>
+                            <a href="/videos/create"> Create a video tutorial</a>
+                        </div>
+            </div>
+        </div>
+        <div class="col-lg-7 .col-md-12 .col-sm-12" id="middle">
+            <div class="mb-4 mt-4 bg-light">
+                {% comment %} <h4 class="section-h3 pl-3 pt-3 text-warning">Videos</h4> {% endcomment %}
+                <div class="vid-tuto">
+                    {% if video_list %}
+                    {% for video in video_list %}
+                    <div class="vid-tuto-card">
+                        <a href="/videos/{{video.id}}" class="text-secondary">
+                            <img src="{{video.thumbnail.url}}" alt="">
+                            <div class=" vid-tuto-card-txt">
+                                <h3>{{video.title}}</h3>
+                                <div class="d-flex align-items-baseline">
+                                    <p><small class="">{{video.created_at}}</small></p>
+                                    <small class="pl-5"> 200k views</small>
+                                </div>
+                        </a>
+                        <div class="d-flex" id="profile-vid">
+
+                            <img src="{{video.authur.profile.image.url}}" alt="">
+                            <div class="pl-2 pt-2 txt-btm">
+                                <p class=""><a href="/accounts/{{video.authur.id}}/info">{{video.authur}}</a></p>
+                                <p><small class="pl-1">{{video.subscribers}} Subscribers</small></p>
+                                <div class="span">
+                                    <span>.</span>
+                                    <span>.</span>
+                                    <span>.</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <hr id='hr1'/>
+                {% endfor %}
+
+
+                {% else %}
+                <h3>No Latest videos</h3>
+
+                {% endif %}
+
+            </div>
+
+            <h5 class="view-all"><a href="/videos/list"> View all <i class="fas fa-angle-double-right"></i></a></h5>
+        </div>
+        <div class="bg-light p-3">
+            <h2 class=" text-primary pl-4 section-h3">Books</h2>
+            {% if books %}
+
+            <div class="" id="profile-book-list">
+                {% for book in books  %}
+
+
+                <div class="card shadow" id="book-card">
+                    <img src="{{book.book_front_cover.url}}" class="card-img-top" alt="..." id="book-img">
+                    <div class="card-body">
+                        <a href="/books/{{book.id}}">
+                            <h5 class="card-title text-primary">{{book.book_title}}</h5>
+                        </a>
+                        <p class="card-text text-secondary">{{book.authur}} </p>
+                    </div>
+
+                </div>
+
+
+                {% endfor %}
+            </div>
+
+            {% else %}
+            <h4>No books</h4>
+            {% endif %}
+
+
+            <h5 class="view-all"><a href="/books/"> View all <i class="fas fa-angle-double-right"></i></a></h5>
+        </div>
+
+
+        <div class=" bg-light videos">
+            <h3 class="text-success pl-4 section-h3">Courses</h3>
+
+            {% if course_list %}
+
+
+            <div class="course  p-4">
+                {% for course in course_list  %}
+                <a href="/courses/{{course.id}}">
+                    <div class="course-cover" id="course-cover">
+                        <img src="{{course.cover_picture.url}}" height="200px" width="300px" alt="">
+
+                        <div class="cover-text">
+                            <p> {{ course.title }}</p>
+                           
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <h5 class="view-all"><a href="/courses/"> View all <i class="fas fa-angle-double-right"></i></a>
+            </h5>
+        </div>
+
+        {% comment %} <h3 class="section-h3">Posts</h3>
+
+        {% if post_list %}
+
+        {% for post in post_list %}
+        <div class="p-3 bg-light" id="post-cad">
+
+            <div class="">
+                <div class="d-flex" id="top-img">
+                    <img src="{{post.authur.profile.image.url}}" width="contain" height="50px"
+                        style="border-radius: 20px;" alt="">
+                    <div class="secti">
+                        <div class="d-flex justify-items-baseline">
+                            <h3 class="pl-3">{{post.authur.username}}</h3>
+                            <div id="span">
+                                <span>.</span>
+                                <span>.</span>
+                                <span>.</span>
+                            </div>
+                        </div>
+                        <small class="pl-1">{{post.created_on}}</small>
+                    </div>
+                </div>
+                <div class="p-3 text-secondary">
+                    <h4>{{post.title}}</h4>
+                    <hr>{{post.description}}...
+                    <a href="">read more</a>
+                </div>
+            </div>
+            <div class="p-3" style="overflow: hidden;">
+                <img src="{{post.image.url}}" alt="" width="100%">
+            </div>
+            <hr>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h3>No Posts</h3>
+        {% endif %} {% endcomment %}
+
+    </div>
+
+    <div class=" col-2 p-3 bg-dark " id="right">
+        <div>
+            <ul>
+                <li><a href=""><i class="fas fa-newspaper"></i><br>New Post</a></li>
+                <li><a href="" class=""><i class="fas fa-book"></i><br>My Books</a></li>
+                <li><a href=""><i class="fas fa-swatchbook"></i><br>Courses</a></li>
+                <li><a href=""><i class="fas fa-align-center"></i> <br>Classes</a></li>
+                <li><a href=""><i class="fas fa-school"></i> <br>Schools</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+  
+
+
+</div>
+</div>
+
+{% endblock content %}
