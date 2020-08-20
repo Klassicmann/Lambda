@@ -58,8 +58,8 @@
             </div>
         </div>
         <div class="col-lg-7 .col-md-12 .col-sm-12" id="middle">
-            <div class="mb-4 mt-4 bg-light">
-                {% comment %} <h4 class="section-h3 pl-3 pt-3 text-warning">Videos</h4> {% endcomment %}
+            <div class=" bg-light p-3">
+                <h4 class="section-h3 pl-3 pt-3 text-warning">Videos</h4>
                 <div class="vid-tuto">
                     {% if video_list %}
                     {% for video in video_list %}
@@ -70,7 +70,7 @@
                                 <h3>{{video.title}}</h3>
                                 <div class="d-flex align-items-baseline">
                                     <p><small class="">{{video.created_at}}</small></p>
-                                    <small class="pl-5"> 200k views</small>
+                                    <small class="pl-2"> 200k views</small>
                                 </div>
                         </a>
                         <div class="d-flex" id="profile-vid">
@@ -90,8 +90,8 @@
 
                     </div>
                 </div>
-                <hr id='hr1'/>
                 {% endfor %}
+                
 
 
                 {% else %}

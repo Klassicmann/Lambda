@@ -1,59 +1,75 @@
-body{
-    margin: 0;
-    padding: 0;
-    
+html {
+  overflow-x: hidden;
 }
-.main{
+body {
+  margin: 0;
+  padding: 0;
+}
+.backgrImg {
+  animation: zoom 1s infinite;
+  min-height: 100vh;
+  width: 100%;
+  background: url("/static/scul/img/files/student4.jpg");
+  background-color: rgb(12, 84, 97) !important;
+}
+
+@keyframes zoom {
+  0% {
+    height: 100%;
+  }
+  25% {
+    height: 50%;
+  }
+}
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgba(33, 59, 63, 0.7) !important;
+}
+.content {
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
+  width: 40%;
+  color: antiquewhite;
+}
+
+.content h1 {
+  color: rgb(226, 86, 31);
+  font-family: "Comfortaa", cursive;
+  font-weight: bold;
+  font-size: 50px;
+}
+.detail1 {
+  min-height: 70vh;
+  padding: 1em;
+}
+@media only screen and (max-width: 600px) {
+  .main {
     min-height: 100vh;
     width: 100%;
-    background: rgb(2,2,2,.7);
-    background-color:rgb(12, 84, 97) !important;
-} 
-.content{
+    background: rgb(2, 2, 2, 0.7);
+  }
+  .content {
     position: absolute;
     top: 20vh;
     left: 20vw;
-    width: 40%;
-}
+    width: 80%;
+  }
 
-.content h1{
+  .content h1 {
     color: rgb(226, 86, 31);
-    font-family: 'Comfortaa', cursive;
+    font-family: "Comfortaa", cursive;
     font-weight: bold;
-    font-size: 50px;
-   
-}
-
-@media only screen and (max-width: 600px){
- 
-    .main{
-        min-height: 100vh;
-        width: 100%;
-        background: rgb(2,2,2,.7);
-    } 
-    .content{
-        position: absolute;
-        top: 20vh;
-        left: 20vw;
-        width: 80%;
-   
-    }
-    
-    .content h1{
-        color: rgb(226, 86, 31);
-        font-family: 'Comfortaa', cursive;
-        font-weight: bold;
-        font-size: 30px;
-
-       
-    }
-    .content h3{
-        color: white;
-        font-size: 20px;
-    }
-    .content img{
-        width: 40%;
-        height: 120px;
-        margin-bottom: 30px;
-    }
+    font-size: 30px;
+  }
+  .content h3 {
+    color: white;
+    font-size: 20px;
+  }
+  .content img {
+    width: 40%;
+    height: 120px;
+    margin-bottom: 30px;
+  }
 }

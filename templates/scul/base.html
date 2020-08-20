@@ -99,7 +99,7 @@
                         <hr class="bg-light">
                     </div>
                 </li>
-{% comment %} 
+
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link d-flex align-items-baseline" data-toggle="dropdown" role="button"
                         aria-haspopup="true" aria-expanded="false"><i class=" fas fa-envelope"></i>
@@ -117,14 +117,14 @@
                         <h3>New message from Technical moon</h3>
                         <p>Hello how are you doing today??</p>
                     </div>
-                </li> {% endcomment %}
-
+                </li> 
+{% comment %} 
                   <li class="nav-item d-flex align-items-baseline dropdown" style="display:none" id="posst"><i class="fas fa-newspaper"></i><a href="/posts"
                         class="nav-link"><span>5</span></a></li>
                         <li class="nav-item d-flex align-items-baseline dropdown" style="display:none" id="posst"><i class="fas fa-video"></i></i><a href="/posts"
                         class="nav-link"><span>5</span></a></li>
                         <li class="nav-item d-flex align-items-baseline dropdown" style="display:none" id="posst"><i class="fas fa-book"></i><a href="/posts"
-                        class="nav-link"><span>20+</span></a></li>
+                        class="nav-link"><span>20+</span></a></li> {% endcomment %}
             </div>
             {% else %}
             <div class="userr">
@@ -195,35 +195,6 @@
 
     </nav>
 
-    <div class="nav2">
-        
-    </div>
-    <div class="m-side" >
-        <div id="mside" >
-        <a id="img-a">
-            <img src="/static/scul/img/menu.png" alt="">
-            <a/>
-        </div>
-
-    </div>
-        <div id="m-sidebar">
-            <div>
-                <div>
-                    <img src="{{request.user.profile.image.url}}" alt="" id="side-profile-image">
-                    
-                </div>
-                <div id="side-text">
-                    <h4>@{{user.username}}</h4>
-                    <hr>
-
-                    <p>Account</p>
-                    <hr>
-                    <a> Logout</a>
-                </div>
-            </div>
-        </div>
-       
-        <img src="{% static 'scul/img/files/lambda.png' %}" id="logo-mobile">
         
     {% block content %}
 

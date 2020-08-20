@@ -4,20 +4,20 @@
 {% block content %}
 
 <div class=" bg-white row shadow-lg" id="book-detail">
-    <div class="col-3" id="book-authur">
+    <div class="col-3 p-3 m-3" id="book-authur">
         <img src="{{book.authur_image.url}}" alt="">
         <h4 class="abt">About the Authur</h4>
         <h3 class="" id="authur"> {{book.authur}}</h3>
         <p>{{book.about_authur| truncatewords:30}}</p>
-    </div>
+    </div> 
 
     <div class="col-3" id="book-covers">
         <img src="{{book.book_front_cover.url}}" alt="">
         <img src="{{book.book_back_cover.url}}" alt="">
     </div>
 
-    <div class="col-6 book-desc">
-        <h2 class="text-secondary">{{book.book_title}}</h2>
+    <div class="col-5 book-desc">
+        {% comment %} <h2 class="text-secondary">{{book.book_title}}</h2> {% endcomment %}
         <h2 class="text-secondary">{{book.book_title}}</h2>
         <h5>{{book.description}}</h5>
         <br>
